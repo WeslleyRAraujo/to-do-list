@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1c2124;
+    background-size: cover;
+    background-repeat: repeat-y;
+    overflow-x: hidden;
+}
+
+#title-page{
+    color: white;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 38px;
+    font-family: 'Roboto Mono', monospace;
+    width: auto;
+}
+
+#title-page:hover{
+    color: green;
+    cursor: not-allowed;
+}
+
+#campo {
+    padding: 25px;
+    display: block;
+    resize: none;
+    background-color: rgba(0, 0, 0, 0.199);
+    width: 90%;
+    height: 200px;
+    text-align: justify;
+    transform: translate(3.5%, 0%);
+    margin-top: 20px;
+    border: 1px solid #51b9c3;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    border-radius: 24px;
+    outline: none;
+}
+
+#botao {
+    display: block;
+    background-color: #51b9c3;
+    color: white;
+    height: 40px;
+    width: 200px;
+    transform: translate(35%, 0%);
+    margin-top: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#botao:hover{
+    background-color: #006ab9;
+}
+
+#list-text {
+    display: block;
+    width: 80%;
+    transform: translate(12.5%, 0%);
+    font-family: 'Roboto Mono', monospace;
+    color: #006ab9;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}   
+
+ul {
+    display: block;
+    width: 80%;
+    transform: translate(12.5%, 0%);
+    line-height: 20px;
+    font-family: 'Asap', sans-serif;
+    font-size: 20px;
+    color: white;
+    list-style-type: decimal;
+    word-wrap: break-word;
+}
+
+ul li{
+    margin-bottom: 40px;
+}
+
+.delete-button {
+    padding-left: 10px;
+    text-decoration: none;
+    color: #51b9c3;
+    word-wrap: none;
+}
+
+.delete-button:hover{
+    color: #006ab9;
+}
+
