@@ -40,11 +40,15 @@ refreshList();
 
 // função responsável por adicionar itens em tela
 function addItem() {
-    var itemText = inputElement.value; // variável que pega o valor digitado na <textarea>
-    list.push(itemText); //colocando esse novo valor na nossa lista
-    emptyInput(); //chamando a função que verifica se o formulário está vazio 
-    saveToStorage(); //salvando no localStorage
-    inputElement.value = ''; // esvaziando nosso formulário
+    if(inputElement.value === ''){
+        alert('Digite algo...');
+    }else{
+        var itemText = inputElement.value; // variável que pega o valor digitado na <textarea>
+        list.push(itemText); //colocando esse novo valor na nossa lista
+        refreshList();
+        saveToStorage(); //salvando no localStorage
+        inputElement.value = ''; // esvaziando nosso formulário
+    } 
 }
 
 // adicionando evento ao botão que ao ser clicado chama a função addItem
@@ -60,13 +64,4 @@ function deleteItem(pos) { // pegando nossa variável pos que existe no refreshL
 //função responsável por salvar nossa lista no localStorage do Browser
 function saveToStorage() {
     localStorage.setItem('lista', JSON.stringify(list));
-}
-
-// função que verifica se o formulário está vazio ou não, caso não esteja a gente chama a função refreshList
-function emptyInput() {
-    if(inputElement.value === ''){
-        alert('Digite algo...');
-    }else{
-        refreshList();
-    }
 }
